@@ -1,5 +1,6 @@
 from lib.database_connection import DatabaseConnection
 from lib.artist_repository import ArtistRepository
+from lib.book_repository import BookRepository
 
 
 # Connect to the database
@@ -16,3 +17,10 @@ artists = artist_repository.all()
 # List them out
 for artist in artists:
     print(artist)
+
+
+# retrieve and print all books
+book_repo = BookRepository(connection)
+books = book_repo.all()
+for book in books:
+    print(book)
